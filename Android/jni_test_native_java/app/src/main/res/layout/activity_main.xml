@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="qz.gl.gx.test_native_java.MainActivity">
+
+
+    <Button
+        android:id="@+id/test"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:elevation="0dp"
+        android:text="基础类型设置与获取"
+        app:layout_constraintBottom_toTopOf="@+id/outputresult"
+        app:layout_constraintEnd_toStartOf="@+id/test_string"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/test_string"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:elevation="0dp"
+        android:text="字符串类型设置与获取"
+        app:layout_constraintBottom_toTopOf="@+id/outputresult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/test" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="112dp"
+            android:layout_height="23dp"
+            android:text="基础整型:"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.029"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.096" />
+
+        <EditText
+            android:id="@+id/intText"
+            android:layout_width="252dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:hint="输入整数"
+            android:inputType="textPersonName|number"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.941"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.076" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:text="基础字符类型："
+            tools:layout_editor_absoluteX="12dp"
+            tools:layout_editor_absoluteY="144dp" />
+
+        <EditText
+            android:id="@+id/charText"
+            android:layout_width="248dp"
+            android:layout_height="46dp"
+            android:ems="10"
+            android:hint="输入字符"
+            android:inputType="textAutoCorrect"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="136dp"
+            tools:layout_editor_absoluteY="130dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:text="字符串："
+            tools:layout_editor_absoluteX="12dp"
+            tools:layout_editor_absoluteY="144dp" />
+
+        <EditText
+            android:id="@+id/stringText"
+            android:layout_width="248dp"
+            android:layout_height="46dp"
+            android:ems="10"
+            android:hint="输入字符串"
+            android:inputType="textAutoCorrect"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="136dp"
+            tools:layout_editor_absoluteY="130dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/outputresult"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:background="@color/colorAccent"
+        android:text="  输出："
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn_jni_set_str"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="JNI层new字符串返回JAVA"
+        app:layout_constraintBottom_toTopOf="@+id/test"
+        app:layout_constraintEnd_toEndOf="@+id/test"
+        app:layout_constraintEnd_toStartOf="@+id/test_jni_int_array"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/test"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/test_jni_int_array"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="测试Int数组"
+        app:layout_constraintBottom_toTopOf="@+id/test_string"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_jni_set_str" />
+
+    <Button
+        android:id="@+id/btn_test_object"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="测试对象设置与获取"
+        app:layout_constraintBottom_toTopOf="@+id/btn_jni_set_str"
+        app:layout_constraintEnd_toStartOf="@+id/test_btn_max_localref"
+        app:layout_constraintStart_toEndOf="@+id/btn_jni_set_str"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/test_btn_max_localref"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="测试本地引用最大值16"
+        app:layout_constraintBottom_toTopOf="@+id/test_jni_int_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_test_object" />
+
+
+</android.support.constraint.ConstraintLayout>
